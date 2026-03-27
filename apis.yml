@@ -1,0 +1,42 @@
+aid: firecamp
+name: Firecamp
+description: >-
+  Firecamp is an open-source API development platform for designing, testing, and documenting REST, GraphQL, and WebSocket APIs.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+      - Clients
+      - GUI
+      - API Client
+      - GraphQL
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/firecamp/refs/heads/main/apis.yml
+created: '2026-03-27'
+modified: '2026-03-27'
+specificationVersion: '0.19'
+apis:
+  - aid: firecamp:firecamp
+    name: Firecamp
+    description: >-
+      Firecamp is an open-source API development platform for designing, testing, and documenting REST, GraphQL, and WebSocket APIs.
+    humanURL: https://firecamp.io
+    tags:
+        - Clients
+        - GUI
+        - API Client
+        - GraphQL
+    properties:
+      - type: Documentation
+        url: https://firecamp.io/docs
+      - type: Getting Started
+        url: https://firecamp.io/docs
+common:
+  - type: Website
+    url: https://firecamp.io
+  - type: Documentation
+    url: https://firecamp.io/docs
+  - type: GitHub Organization
+    url: https://github.com/firecamp-dev/firecamp
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
