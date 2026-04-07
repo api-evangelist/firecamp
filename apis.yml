@@ -5,10 +5,10 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-      - Clients
-      - GUI
-      - API Client
-      - GraphQL
+  - API Client
+  - Clients
+  - GraphQL
+  - GUI
 url: >-
   https://raw.githubusercontent.com/api-evangelist/firecamp/refs/heads/main/apis.yml
 created: '2026-03-27'
@@ -21,10 +21,10 @@ apis:
       Firecamp is an open-source API development platform for designing, testing, and documenting REST, GraphQL, and WebSocket APIs.
     humanURL: https://firecamp.io
     tags:
-        - Clients
-        - GUI
-        - API Client
-        - GraphQL
+      - API Client
+      - Clients
+      - GraphQL
+      - GUI
     properties:
       - type: Documentation
         url: https://firecamp.io/docs
