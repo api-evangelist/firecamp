@@ -42,9 +42,9 @@ apis:
     properties:
       - type: Documentation
         url: https://firecamp.io/docs
-      - type: Getting Started
+      - type: GettingStarted
         url: https://firecamp.io/docs
-      - type: GitHub Repository
+      - type: GitHubRepository
         url: https://github.com/firecamp-dev/firecamp
 common:
   - type: Website
@@ -57,9 +57,9 @@ common:
     url: https://firecamp.io/blog
   - type: Download
     url: https://firecamp.io/downloads
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/firecamp-dev
-  - type: GitHub Repository
+  - type: GitHubRepository
     url: https://github.com/firecamp-dev/firecamp
   - type: Discord
     url: https://discord.gg/8hRaqhK
