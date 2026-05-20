@@ -47,6 +47,8 @@ apis:
       - type: GitHubRepository
         url: https://github.com/firecamp-dev/firecamp
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/firecampdev
   - type: Website
     url: https://firecamp.io
   - type: Documentation
