@@ -49,6 +49,8 @@ apis:
   - url: graphql/firecamp-graphql.md
     type: GraphQL
 common:
+- type: DomainSecurity
+  url: security/firecamp-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/firecampdev
 - type: Website
