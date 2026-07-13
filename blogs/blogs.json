@@ -2,13 +2,14 @@
   "repo": "firecamp",
   "feeds": [
     {
-      "source": "https://firecamp.io/blog",
-      "feed_url": "",
+      "source": "https://firecamp.io/pricing",
+      "feed_url": "https://firecamp.io/pricing",
+      "title": "",
       "saved": 0,
-      "method": "agent-scrape"
+      "method": "none"
     }
   ],
-  "fetched": "2026-06-27T12:41:03Z",
+  "fetched": "2026-07-11T11:50:51Z",
   "post_count": 0,
   "agent_pulled": "2026-06-27"
 }
