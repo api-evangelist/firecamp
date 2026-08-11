@@ -61,6 +61,15 @@ apis:
   - url: graphql/firecamp-graphql.md
     type: GraphQL
 common:
+- type: IssueTracker
+  url: https://github.com/firecamp-dev/firecamp/issues
+- type: Releases
+  url: https://github.com/firecamp-dev/firecamp/releases
+- type: ContributionGuide
+  url: https://github.com/firecamp-dev/firecamp/blob/main/CONTRIBUTING.md
+- type: License
+  name: AGPL-3.0
+  url: https://github.com/firecamp-dev/firecamp/blob/main/LICENSE
 - type: DomainSecurity
   url: security/firecamp-domain-security.yml
 - type: LinkedIn
