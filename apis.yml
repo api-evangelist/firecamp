@@ -8,6 +8,19 @@ description: >-
   integration. Firecamp does not expose a public consumer API; it is a tooling
   product for working with other APIs.
 type: Index
+deliveryModel:
+  model: open-core
+  license: AGPL-3.0
+  open_source: true
+  commercial: true
+  callable_host: false
+  label: Open core · an OSS project plus a commercial hosted product
+  confidence: high
+  source:
+  - license
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
