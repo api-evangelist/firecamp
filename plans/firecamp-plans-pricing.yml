@@ -3,145 +3,109 @@ specificationVersion: '0.1'
 schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
 provider: Firecamp
 providerId: firecamp
+generated: '2026-09-13'
+method: searched
+source: https://firecamp.io/pricing
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-04'
+modified: '2026-09-13'
 tags:
-  - API Client
-  - Clients
-  - GraphQL
-  - GUI
-  - REST
-  - WebSocket
-  - Open Source
-  - Testing
-description: Machine-readable plans and pricing scaffold for this API provider. Conforms to the API Commons
-  Plans schema. Tier limits and prices are scaffold defaults; replace with provider-published values.
+- API Client
+- Clients
+- GraphQL
+- GUI
+- REST
+- WebSocket
+- Open Source
+- Testing
+description: >-
+  Firecamp's published plans, read verbatim from https://firecamp.io/pricing on 2026-09-13.
+  This file REPLACES a 2026-05-04 API Evangelist scaffold that carried invented request
+  quotas and rate ceilings (1,000 req/month free, 100,000 req/month pro, per-request
+  overage). Firecamp does not meter API requests at all — it is a seat-priced developer
+  tool, not a metered API — so every quota in that scaffold described a billing model the
+  provider has never operated. Pricing below is per seat-band and flat-rate.
+plan_count: 3
+billing:
+  unit: seats
+  currency: USD
+  metered: false
+  note: >-
+    No usage metering, no request quota and no overage pricing appears anywhere on the
+    pricing page. Tiers are bounded by seat count.
 plans:
-  - id: firecamp-free
-    name: Free
-    type: freemium
-    description: Free entry tier for the Firecamp API surface. Intended for evaluation, prototyping, and
-      low-volume integrations. Real limits and pricing must be reconciled with the provider's published
-      plan documentation.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota across all included endpoints
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 1000
-        timeFrame: month
-        geo: global
-        domains: []
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the free tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 10
-        timeFrame: minute
-        geo: global
-        domains: []
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-    elements:
-      - name: Public Documentation
-      - name: Community Support
-      - name: Sandbox Access
-      - name: Firecamp
-  - id: firecamp-pro
-    name: Professional
-    type: paid
-    description: Production tier for Firecamp. Provides higher quotas, priority support, and access to
-      the broader API portfolio. Pricing placeholder; align with the provider's pricing page.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 100000
-        timeFrame: month
-        geo: global
-        domains: []
-        unit: 1
-        price: TBD
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the professional tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 100
-        timeFrame: minute
-        geo: global
-        domains: []
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Overage
-        description: Per-request price after monthly quota is exceeded
-        name: overage
-        type: metered
-        metric: requests
-        limit: -1
-        timeFrame: month
-        geo: global
-        domains: []
-        unit: 1000
-        price: TBD
-        userMultiplied: false
-    elements:
-      - name: All Production Endpoints
-      - name: Email Support
-      - name: SLA Targets
-      - name: Webhook Subscriptions
-      - name: Firecamp
-  - id: firecamp-enterprise
-    name: Enterprise
-    type: enterprise
-    description: Custom-negotiated tier for Firecamp. Includes dedicated capacity, contractual SLAs, security
-      review, data residency options, and named technical account management.
-    entries:
-      - label: API Requests
-        description: Negotiated request volume; -1 indicates uncapped subject to fair use
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: -1
-        timeFrame: month
-        geo: configurable
-        domains: []
-        unit: 1
-        price: custom
-        userMultiplied: false
-      - label: Rate Limit
-        description: Negotiated burst and steady-state rate
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 1000
-        timeFrame: minute
-        geo: configurable
-        domains: []
-        unit: 1
-        price: custom
-        userMultiplied: false
-    elements:
-      - name: Unlimited / Negotiated Volume
-      - name: 24/7 Dedicated Support
-      - name: Contractual SLA
-      - name: Security & Compliance Review
-      - name: Dedicated Account Manager
-      - name: Custom Data Residency
-      - name: Firecamp
+- id: firecamp-free
+  name: Free
+  type: freemium
+  price: '0.00'
+  currency: USD
+  billingPeriod: month
+  seats: 5
+  seats_label: upto 5 seats
+  description: >-
+    Free tier for individuals and small teams, up to 5 seats. Verbatim from the pricing page.
+  entries:
+  - label: Seats
+    name: seats
+    type: quota
+    metric: seats
+    limit: 5
+    timeFrame: month
+    unit: 1
+    price: '0.00'
+    userMultiplied: false
+  elements:
+  - name: API Playgrounds
+  - name: API Collaboration
+  - name: Unlimited Workspaces
+  - name: Unlimited API Collections
+  - name: Community Support
+- id: firecamp-team
+  name: Team
+  type: paid
+  price: '49.00'
+  price_monthly: '59.00'
+  currency: USD
+  billingPeriod: month
+  billing_note: '$49 per month billed yearly, or $59 monthly'
+  seats: 15
+  seats_label: upto 15 seats
+  description: >-
+    Paid team tier, up to 15 seats. Listed as "$49 per month billed yearly or $59 monthly".
+  entries:
+  - label: Seats
+    name: seats
+    type: quota
+    metric: seats
+    limit: 15
+    timeFrame: month
+    unit: 1
+    price: '49.00'
+    userMultiplied: false
+  elements:
+  - name: All Free features
+  - name: 15 team members
+  - name: 24*7 Support on a priority
+  - name: Team Management Resources
+- id: firecamp-enterprise
+  name: Enterprise
+  type: enterprise
+  price: custom
+  currency: USD
+  billingPeriod: custom
+  seats: null
+  description: >-
+    "Need more? Contact us for a custom plan for your company." No published price, seat
+    band, quota or SLA. The contact path on the pricing page is a Tally form
+    (https://tally.so/r/mRxW14).
+  entries: []
+  elements:
+  - name: Custom plan
+not_published:
+- request quotas
+- rate limits per tier
+- overage pricing
+- contractual SLA terms
+- data residency options
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com

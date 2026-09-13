@@ -1,0 +1,106 @@
+generated: '2026-09-13'
+method: searched
+source: >-
+  https://firecamp.io/blog (dated "Changelog #NNN" release-note posts) and
+  https://api.github.com/repos/firecamp-dev/firecamp/releases
+specification: API Commons ChangeLog
+specificationVersion: '0.1'
+provider: Firecamp
+providerId: firecamp
+description: >-
+  Firecamp publishes release notes as dated "Changelog #NNN" posts on its blog, and tags
+  releases on GitHub. There is no dedicated /changelog page (https://firecamp.io/changelog
+  returns 404) and no feed (rss.xml, feed.xml and blog/rss.xml all 404). Both surfaces stop
+  in 2023-2024: the newest blog changelog is #004 (2023-10-20) and the newest GitHub release
+  is v3.3.0-beta.3 (2024-03-04). This describes the open-source product, not an API — Firecamp
+  ships no consumer API and therefore no API version history.
+surfaces:
+- name: Blog changelog posts
+  url: https://firecamp.io/blog
+  status: 200
+  kind: release-notes
+  latest: '2023-10-20'
+- name: GitHub releases
+  url: https://github.com/firecamp-dev/firecamp/releases
+  status: 200
+  kind: tagged-releases
+  latest: '2024-03-04'
+- name: Dedicated changelog page
+  url: https://firecamp.io/changelog
+  status: 404
+  kind: absent
+- name: Changelog feed
+  url: https://firecamp.io/blog/rss.xml
+  status: 404
+  kind: absent
+scheme:
+  versioning: semver
+  applies_to: Firecamp desktop and web application (product versioning)
+  api_versioning: none — no public API is versioned
+current_version: v3.3.0-beta.3
+current_version_date: '2024-03-04'
+current_stable: v3.2.3
+current_stable_date: '2023-10-20'
+entries:
+- version: v3.3.0-beta.3
+  date: '2024-03-04'
+  channel: prerelease
+  url: https://github.com/firecamp-dev/firecamp/releases/tag/v3.3.0-beta.3
+  breaking: false
+  note: >-
+    Tagged GitHub prerelease. No accompanying blog release note was published; highlights
+    not stated by the provider.
+- version: v3.2.3
+  date: '2023-10-20'
+  channel: stable
+  url: https://firecamp.io/blog/changelog-004
+  breaking: false
+  highlights:
+  - Switched the UI library to Mantine
+  - New color-scheme selector
+  - Launched the @firecamp/types package for shared type definitions
+  - FileInput component for file uploads
+  - Tooltip component and action-bar tooltips
+  - Upgraded to React 18
+  fixes:
+  - Windows build failure from incorrect script escaping
+  - Zustand console warnings
+- version: v3.2.0
+  date: '2023-08-03'
+  channel: stable
+  url: https://firecamp.io/blog/changelog-003
+  breaking: false
+  highlights:
+  - Profile, workspace and organization management moved into the app
+  - Invitation management and invitation acceptance handled in-app
+  - Removed the sub-domain redirect to app.firecamp.dev
+- version: v3.1.0
+  date: '2023-07-31'
+  channel: stable
+  url: https://firecamp.io/blog/changelog-002
+  breaking: false
+  highlights:
+  - Theming with primary/secondary color options
+  - Authentication modals moved to a side drawer
+  - New icon set
+- version: v3.0.0
+  date: '2023-07-12'
+  channel: stable
+  url: https://firecamp.io/blog/changelog-001
+  breaking: true
+  highlights:
+  - Complete rewrite as a web-first, multi-protocol platform
+  - Dedicated playgrounds per protocol (REST, GraphQL, WebSocket, Socket.IO)
+  - Postman compatibility for collections and pre-request/test scripts
+  breaking_changes:
+  - Firecamp v2 desktop is no longer compatible with v3 collaboration
+  - Collection-level and workspace-level environments are no longer supported (old environments are clonable into environment variables)
+  - Firecamp v2 scripts are no longer supported; scripts are now Postman-compatible
+  migration_guide: https://firecamp.io/blog/changelog-001
+  deprecations:
+  - item: Firecamp Chrome extension
+    effective: '2023-10-01'
+    remedy: Switch to the Firecamp web application at https://firecamp.dev
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

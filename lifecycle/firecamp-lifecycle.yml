@@ -1,0 +1,100 @@
+generated: '2026-09-13'
+method: searched
+source: >-
+  https://firecamp.io/blog/changelog-001 (versioning, breaking changes, migration guide,
+  Chrome-extension deprecation, roadmap section), https://github.com/firecamp-dev/firecamp/releases,
+  plus live probes of the status/roadmap/SLA surfaces listed under `absent`.
+specification: API Commons Lifecycle
+specificationVersion: '0.1'
+provider: Firecamp
+providerId: firecamp
+description: >-
+  Product lifecycle for Firecamp, the open-source multi-protocol API client. Firecamp
+  publishes no consumer API, so there is no API version, no deprecated operation set and no
+  API SLA — everything below describes the application and the open-source project. Firecamp
+  HAS communicated one real, dated deprecation with a migration path (the Chrome extension,
+  effective 2023-10-01) but publishes no standing deprecation POLICY: no sunset window is
+  promised, no RFC 8594 Sunset/Deprecation headers exist (there is no HTTP contract to carry
+  them), and no support-window commitment is stated anywhere. No `Deprecation` pointer is
+  emitted in apis.yml for that reason — one event notice is not a policy, and claiming
+  otherwise would credit Firecamp with a commitment it has not made.
+versioning:
+  scheme: semver
+  current: v3.3.0-beta.3
+  current_date: '2024-03-04'
+  current_stable: v3.2.3
+  current_stable_date: '2023-10-20'
+  in_url: false
+  in_header: false
+  note: Product versioning only; no API version surface exists.
+deprecation:
+  policy_published: false
+  policy_url: null
+  sunset_headers: false
+  rfc8594: false
+  events:
+  - item: Firecamp Chrome extension
+    announced: '2023-07-12'
+    effective: '2023-10-01'
+    announcement: https://firecamp.io/blog/changelog-001
+    remedy: Use the Firecamp web application at https://firecamp.dev
+  - item: Firecamp v2 desktop collaboration
+    announced: '2023-07-12'
+    effective: '2023-07-12'
+    announcement: https://firecamp.io/blog/changelog-001
+    remedy: Sign in at https://firecamp.dev; workspaces and collections carry over with no manual migration
+  - item: Collection-level and workspace-level environments
+    announced: '2023-07-12'
+    effective: '2023-07-12'
+    announcement: https://firecamp.io/blog/changelog-001
+    remedy: Clone legacy environments into environment variables from the environment sidebar
+  - item: Firecamp v2 scripts
+    announced: '2023-07-12'
+    effective: '2023-07-12'
+    announcement: https://firecamp.io/blog/changelog-001
+    remedy: Rewrite against the new Postman-compatible scripting API
+  deprecated_operations: []
+  deprecated_operations_note: No OpenAPI exists for this provider, so no operation-level deprecation can be derived.
+status_page:
+  published: false
+  url: null
+  probes:
+  - url: https://status.firecamp.io
+    status: 0
+    finding: DNS does not resolve.
+  - url: https://firecamp.statuspage.io
+    status: 200
+    finding: >-
+      NOT a Firecamp status page — the hostname is unclaimed and Atlassian serves its own
+      Statuspage marketing site there (canonical https://www.atlassian.com/software/statuspage).
+      Recorded as a false positive so a later run does not credit it.
+  - url: https://firecamp.io/status
+    status: 404
+sla:
+  published: false
+  note: >-
+    No uptime or support-response SLA is published. The paid Team tier advertises "24*7
+    Support on a priority" on https://firecamp.io/pricing with no target attached; the
+    Enterprise tier is a contact-sales form (https://tally.so/r/mRxW14).
+roadmap:
+  published: false
+  url: null
+  note: >-
+    https://firecamp.io/roadmap returns 404. A "Roadmap: Future of Firecamp" section exists
+    inside the 2023-07-12 release note (https://firecamp.io/blog/changelog-001) naming
+    AI-powered capabilities, a CLI, an advanced test runner, a built-in proxy, SSL support,
+    history tracking, better docs and CI/CD integration. It is a three-year-old narrative
+    section, not a maintained roadmap surface, so no `Roadmap` pointer is emitted.
+maintenance_signals:
+  last_source_push: '2026-03-04'
+  last_release: '2024-03-04'
+  last_npm_publish: '2024-01-09'
+  last_blog_post: '2023-10-20'
+  open_issues: 105
+  archived: false
+  note: >-
+    Repository is not archived and was pushed in March 2026, but every published artifact
+    surface (releases, npm, blog) stops in 2023-2024.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

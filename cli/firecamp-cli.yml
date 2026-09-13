@@ -1,0 +1,60 @@
+generated: '2026-09-13'
+method: searched
+source: >-
+  https://firecamp.io/docs/cli/getting-started, https://firecamp.io/cli, and
+  https://github.com/firecamp-dev/firecamp/tree/main/packages/firecamp-cli
+  (package.json + src/commands read via the GitHub contents API)
+specification: API Commons CLI
+specificationVersion: '0.1'
+provider: Firecamp
+providerId: firecamp
+description: >-
+  RECORDED AS NOT AVAILABLE. A first-party Firecamp CLI exists in source but has never
+  shipped, so no `CLI` pointer is emitted in apis.yml — a consumer cannot install it today.
+  Both provider surfaces say so plainly: the docs page states "Firecamp CLI is currently
+  under development. The documentation of CLI will be available very soon as the feature
+  will be released", and https://firecamp.io/cli says "This page is under construction".
+available: false
+status: unreleased
+evidence:
+- url: https://firecamp.io/docs/cli/getting-started
+  status: 200
+  finding: '"Firecamp CLI is currently under development."'
+- url: https://firecamp.io/cli
+  status: 200
+  finding: '"Run API Collection in terminal or CI/CD" — "This page is under construction".'
+- url: https://registry.npmjs.org/firecamp-cli
+  status: 404
+  finding: Package name in the monorepo (`firecamp-cli`) is not published to npm.
+- url: https://registry.npmjs.org/firecamp
+  status: 200
+  finding: >-
+    A 2019 placeholder publish described as "Firecamp cli" at version 0.0.1 exists under the
+    bare name `firecamp`. It predates the current monorepo CLI by four years and is not the
+    same program.
+source_surface:
+  repository: https://github.com/firecamp-dev/firecamp
+  path: packages/firecamp-cli
+  declared_version: 0.0.0
+  framework: oclif (@oclif/core ^2.8.5)
+  binary: firecamp
+  author: Nishchit Dhanani (@Nishchit14)
+  engines: node >=16
+  commands:
+  - name: collection
+    note: >-
+      Intended collection runner (the /cli marketing page describes "Run API Collection in
+      terminal or CI/CD"). Command behaviour is not documented by the provider; not asserted here.
+  - name: hello
+    note: oclif scaffold command left from `oclif generate`.
+  dependencies_of_note:
+  - '@firecamp/collection-runner (workspace, also unpublished)'
+  - '@firecamp/rest-executor ^1.0.19'
+install_methods: []
+install_note: >-
+  None. There is no npm package, Homebrew formula, install script or downloadable binary for
+  the CLI. The only distributed Firecamp binaries are the desktop application builds on
+  https://firecamp.io/download (macOS Intel, macOS Apple Silicon, Windows 64, Ubuntu AppImage).
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

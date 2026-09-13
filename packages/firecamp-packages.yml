@@ -1,0 +1,195 @@
+generated: '2026-09-13'
+method: searched
+source: >-
+  https://registry.npmjs.org/-/v1/search?text=firecamp (npm registry search + per-package
+  metadata endpoints), cross-checked against
+  https://api.github.com/repos/firecamp-dev/firecamp/contents/packages
+specification: API Commons Packages
+specificationVersion: '0.1'
+provider: Firecamp
+providerId: firecamp
+description: >-
+  First-party packages published by Firecamp. IMPORTANT SCOPE NOTE: Firecamp publishes no
+  public consumer HTTP API, so none of these are client SDKs for a Firecamp API. They are
+  internal libraries of the open-source Firecamp monorepo (firecamp-dev/firecamp, AGPL-3.0)
+  published to npm under the @firecamp scope. They are recorded here as real, dated,
+  first-party distribution evidence — and because their publish dates are the clearest
+  currency signal available for this project. No `SDKs` pointer is emitted in apis.yml:
+  there is no API for an SDK to wrap, and claiming one would be a false credit.
+official_attribution: >-
+  Every @firecamp-scope package below lists npm maintainer `nishchit14` (Nishchit Dhanani),
+  who is also the author named in firecamp.io page metadata (`meta name="author"
+  content="Nishchit"`) and in packages/firecamp-cli/package.json. Treated as first-party.
+registries_checked:
+- registry: npm
+  endpoint: https://registry.npmjs.org/
+  result: 12 first-party packages found
+- registry: PyPI
+  endpoint: https://pypi.org/
+  result: none — Firecamp ships no Python distribution
+- registry: crates.io
+  endpoint: https://crates.io/
+  result: none
+- registry: RubyGems
+  endpoint: https://rubygems.org/
+  result: none
+- registry: Maven Central
+  endpoint: https://search.maven.org/
+  result: none
+- registry: NuGet
+  endpoint: https://api.nuget.org/
+  result: none
+- registry: pkg.go.dev
+  endpoint: https://proxy.golang.org/
+  result: none
+- registry: Packagist
+  endpoint: https://packagist.org/
+  result: none
+packages:
+- name: '@firecamp/cloud-apis'
+  registry: npm
+  url: https://www.npmjs.com/package/@firecamp/cloud-apis
+  official: true
+  kind: library
+  language: TypeScript
+  version: 0.2.13
+  published: '2024-01-09'
+  repository: https://github.com/firecamp-dev/firecamp
+  note: >-
+    Client library the Firecamp app uses against its own cloud backend. Not a published
+    consumer SDK — the backend it calls (api.firecamp.dev) returns 404 to anonymous
+    requests and has no public reference.
+- name: '@firecamp/rest-executor'
+  registry: npm
+  url: https://www.npmjs.com/package/@firecamp/rest-executor
+  official: true
+  kind: library
+  language: TypeScript
+  version: 1.0.19
+  published: '2023-06-15'
+  repository: https://github.com/firecamp-dev/firecamp
+  note: REST request executor used by the Firecamp playgrounds and the collection runner.
+- name: '@firecamp/curl-to-firecamp'
+  registry: npm
+  url: https://www.npmjs.com/package/@firecamp/curl-to-firecamp
+  official: true
+  kind: library
+  language: TypeScript
+  version: 1.0.2
+  published: '2023-10-30'
+  repository: https://github.com/firecamp-io/curl-to-firecamp
+  note: Transforms a curl command into a Firecamp request object. Most recently published first-party package.
+- name: '@firecamp/curl-to-firecamp-v2'
+  registry: npm
+  url: https://www.npmjs.com/package/@firecamp/curl-to-firecamp-v2
+  official: true
+  kind: library
+  language: TypeScript
+  version: 0.0.5
+  published: '2022-05-12'
+  repository: https://github.com/firecamp-io/curl-to-firecamp
+  note: Superseded by @firecamp/curl-to-firecamp.
+- name: '@firecamp/scripts'
+  registry: npm
+  url: https://www.npmjs.com/package/@firecamp/scripts
+  official: true
+  kind: library
+  language: TypeScript
+  version: 0.0.5
+  published: '2023-05-11'
+  repository: https://github.com/firecamp-dev/firecamp
+  note: Pre-request / test scripting library exposed inside the playgrounds.
+- name: '@firecamp/utils'
+  registry: npm
+  url: https://www.npmjs.com/package/@firecamp/utils
+  official: true
+  kind: library
+  language: TypeScript
+  version: 0.0.24
+  published: '2023-04-27'
+  repository: https://github.com/firecamp-dev/firecamp
+  note: Shared utility functions for the monorepo.
+- name: '@firecamp/types'
+  registry: npm
+  url: https://www.npmjs.com/package/@firecamp/types
+  official: true
+  kind: types
+  language: TypeScript
+  version: 0.2.2
+  published: '2023-04-21'
+  repository: https://github.com/firecamp-dev/firecamp
+  note: TypeScript typing library for Firecamp request/collection shapes.
+- name: '@firecamp/url'
+  registry: npm
+  url: https://www.npmjs.com/package/@firecamp/url
+  official: true
+  kind: library
+  language: TypeScript
+  version: 0.0.20
+  published: '2023-02-10'
+  repository: https://github.com/firecamp-dev/firecamp
+  note: URL parsing/assembly utility for request URLs.
+- name: '@firecamp/utility'
+  registry: npm
+  url: https://www.npmjs.com/package/@firecamp/utility
+  official: true
+  kind: library
+  language: JavaScript
+  version: 0.1.126
+  published: '2022-05-31'
+  repository: https://github.com/firecampapp/firecamp-utility
+  note: Legacy utility package from an earlier Firecamp GitHub org (firecampapp). Superseded by @firecamp/utils.
+- name: '@firecamp/sync-joi-schema'
+  registry: npm
+  url: https://www.npmjs.com/package/@firecamp/sync-joi-schema
+  official: true
+  kind: library
+  language: JavaScript
+  version: 0.0.26
+  published: '2021-02-08'
+  repository: null
+  note: Joi validation schemas for the sync layer. No repository declared in package metadata.
+- name: firecamp
+  registry: npm
+  url: https://www.npmjs.com/package/firecamp
+  official: true
+  kind: cli
+  language: JavaScript
+  version: 0.0.1
+  published: '2019-12-09'
+  repository: null
+  note: >-
+    Name-holding placeholder publish described as "Firecamp cli". Single 0.0.1 release from
+    2019; it is NOT the oclif CLI now in the monorepo (see cli/firecamp-cli.yml), which has
+    never been published.
+- name: '@firecamp/electron-oauth-helper'
+  registry: npm
+  url: https://www.npmjs.com/package/@firecamp/electron-oauth-helper
+  official: false
+  kind: fork
+  language: TypeScript
+  version: 5.1.2
+  published: '2022-07-31'
+  repository: https://github.com/mironal/electron-oauth-helper
+  note: >-
+    Republished fork of a third-party library (mironal/electron-oauth-helper) under the
+    @firecamp scope. Marked official:false — Firecamp did not author it.
+absent:
+- name: '@firecamp/collection-runner'
+  reason: >-
+    Exists in the monorepo at packages/firecamp-collection-runner (version 1.0.0) but returns
+    HTTP 404 from registry.npmjs.org — never published.
+- name: firecamp-cli
+  reason: >-
+    Exists in the monorepo at packages/firecamp-cli (version 0.0.0, oclif) but returns HTTP
+    404 from registry.npmjs.org — never published.
+currency:
+  most_recent_publish: '2024-01-09'
+  most_recent_package: '@firecamp/cloud-apis'
+  note: >-
+    No first-party package has been published to npm since 2024-01-09, and the monorepo's
+    last push was 2026-03-04 (GitHub API). The published distribution surface trails the
+    source by roughly two years.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

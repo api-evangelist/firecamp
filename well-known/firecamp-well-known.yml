@@ -1,0 +1,109 @@
+generated: '2026-09-13'
+method: probed
+source: >-
+  Live anonymous HTTP probes of the named /.well-known/ path list on every host this record
+  knows: the registrable domain (firecamp.io) and its www alias, the web-application host
+  (firecamp.dev), and the application's backend host (api.firecamp.dev, read from
+  FIRECAMP_API_HOST in https://raw.githubusercontent.com/firecamp-dev/firecamp/main/.env.example).
+specification: API Commons WellKnown
+specificationVersion: '0.1'
+provider: Firecamp
+providerId: firecamp
+description: >-
+  RECORDED ABSENCE. Firecamp serves no /.well-known/ discovery document on any host. Every
+  named path returned 404 (or a 308 www -> apex redirect that resolves to the same 404).
+  No `WellKnown` and no `SecurityTxt` pointer is emitted in apis.yml, because a pointer
+  asserts the provider serves that surface and Firecamp does not.
+hosts:
+- host: firecamp.io
+  role: marketing site + documentation (firecamp.io/docs)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: www.firecamp.io
+  role: www alias
+  documents:
+  - path: /.well-known/security.txt
+    status: 308
+    file: null
+    note: 308 redirect to the firecamp.io apex, which 404s.
+  - path: /.well-known/openid-configuration
+    status: 308
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 308
+    file: null
+  - path: /.well-known/api-catalog
+    status: 308
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 308
+    file: null
+- host: firecamp.dev
+  role: web application ("Launch Firecamp")
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: api.firecamp.dev
+  role: application backend host (no public reference; anonymous requests 404)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+summary:
+  hosts_probed: 4
+  documents_probed: 24
+  documents_served: 0
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
