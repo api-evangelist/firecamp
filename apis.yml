@@ -41,7 +41,7 @@ tags:
 - GUI
 - REST
 - WebSocket
-- Open-Source
+- Open Source
 - Testing
 tags_raw:
 - API Client
@@ -52,6 +52,7 @@ tags_raw:
 - WebSocket
 - Open Source
 - Testing
+- Open-Source
 url: >-
   https://raw.githubusercontent.com/api-evangelist/firecamp/refs/heads/main/apis.yml
 created: '2026-03-27'
