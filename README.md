@@ -1,4 +1,4 @@
-# Firecamp (firecamp)
+# Firecamp
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,52 +66,106 @@
 
 Firecamp is an open-source API development platform for designing, testing, and documenting REST, GraphQL, and WebSocket APIs. It provides multi-protocol playgrounds (REST, GraphQL, WebSocket, SocketIO), team collaboration in shared workspaces, API collection management, a test runner, and CLI/CI-CD integration. Firecamp does not expose a public consumer API; it is a tooling product for working with other APIs.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/firecamp/refs/heads/main/apis.yml)
+**Areas:** API Client · Clients · GraphQL · GUI · REST · WebSocket · Open Source · Testing
 
-## Scope
+## Firecamp on APIs.io
 
-- **Type:** Index
+Everything profiled for Firecamp is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/firecamp/](https://apis.io/providers/firecamp/)** — or go straight to one of the APIs or properties below.
 
-## Tags:
+### APIs (1)
 
- - API Client, Clients, GraphQL, GUI, REST, WebSocket, Open Source, Testing
+- [Firecamp](https://apis.io/apis/firecamp/firecamp/) — Firecamp is an open-source API development platform for designing, testing, and documenting REST, GraphQL, and WebSocket APIs. The product itself does not…
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-27
-- **Modified:** 2026-04-28
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Security (1)
 
-### Firecamp
-Firecamp is an open-source API development platform for designing, testing, and documenting REST, GraphQL, and WebSocket APIs. The product itself does not publish a consumer-facing HTTP API; it is a desktop and web client used to test and manage other APIs.
+Authentication, trust centre, and vulnerability disclosure.
 
-**Human URL:** [https://firecamp.io](https://firecamp.io)
+- [Firecamp Domain Security](https://apis.io/security/firecamp/firecamp-domain-security/)
 
-#### Tags:
+#### Plans and pricing (1)
 
- - API Client, Clients, GraphQL, GUI, REST, WebSocket
+Published plans, tiers and prices.
 
-#### Properties
+- [Firecamp Plans Pricing](https://apis.io/plans/firecamp/firecamp-plans-pricing/)
 
-- [Documentation](https://firecamp.io/docs)
-- [Getting Started](https://firecamp.io/docs)
-- [GitHub Repository](https://github.com/firecamp-dev/firecamp)
+#### Rate limits (1)
 
-## Common Properties
+Published request limits.
+
+- [Firecamp Rate Limits](https://apis.io/rate-limits/firecamp/firecamp-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Firecamp Finops](https://apis.io/finops/firecamp/firecamp-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://firecamp.io)
 - [Documentation](https://firecamp.io/docs)
 - [Pricing](https://firecamp.io/pricing)
+- [Support](https://discord.com/invite/8hRaqhK)
 - [Blog](https://firecamp.io/blog)
-- [Download](https://firecamp.io/downloads)
-- [GitHub Organization](https://github.com/firecamp-dev)
-- [GitHub Repository](https://github.com/firecamp-dev/firecamp)
-- [Discord](https://discord.gg/8hRaqhK)
-- [Twitter](https://twitter.com/FirecampHQ)
+- [Terms of service](https://firecamp.io/legal/terms-and-conditions)
+- [Privacy policy](https://firecamp.io/legal/privacy-policy)
+- [GitHub](https://github.com/firecamp-dev)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
+**Kin Score 29.8** — thin · rubric 0.24.0 · scored 2026-10-17
 
-**Email:** kin@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 69.7 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 13.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/firecamp/](https://apis.io/providers/firecamp/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Firecamp: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/firecamp/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
